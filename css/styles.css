@@ -1,0 +1,50 @@
+/*
+:root {
+}
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+#grid {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 0px;
+  grid-row-gap: 0px;
+  grid-column-gap: 0px;
+  gap: 0px;
+/*  width: vmin; */
+/*  height: vmin; */
+  width: min(100vw, 100vh);
+  height: min(100vw, 100vh);
+  --num-cols: 3;
+  --num-rows: 3;
+  grid-auto-rows: var(--grid-cell-square-size);
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-template-rows:    repeat(var(--num-rows), 1fr);
+}
+
+.grid-cell {
+  object-fit: fill; /* cover */
+  box-sizing: border-box;
+/*  width: calc(min(100vw, 100vh) * 0.3333); */
+/*  height: calc(min(100vw, 100vh) * 0.3333); */
+/*  width: 100%; */
+/*  height: 100%; */
+/*  width: 33.333vmin; */
+/*  height: 33.333vmin; */
+  --grid-cell-square-size: calc(min(100vw, 100vh) * 0.3333);
+  width: var(--grid-cell-square-size);
+  height: var(--grid-cell-square-size);
+}
